@@ -7,6 +7,7 @@
   "dependencies": {
     "@phenomnomnominal/tsquery": "^4.2.0",
     "chalk": "^5.0.0",
+    "cli-table": "^0.3.11",
     "fast-csv": "^4.3.6",
     "glob": "^7.2.0",
     "yargs": "^17.3.1"

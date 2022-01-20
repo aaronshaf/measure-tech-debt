@@ -3,6 +3,7 @@ const yargs = require("yargs/yargs");
 const { hideBin } = require("yargs/helpers");
 const csv = require("fast-csv");
 const argv = yargs(hideBin(process.argv)).argv;
+const Table = require("cli-table");
 
 const path = require("path");
 const { getStats } = require("./stats");
@@ -15,9 +16,11 @@ const csvStream = argv.csv ? csv.format({ headers: true }) : null;
 
 if (argv.csv) {
   csvStream.pipe(process.stdout).on("end", () => process.exit());
+} else {
+  console.log("[");
 }
 
-const aggregateStats = paths.map((p) => {
+paths.forEach((p, index, array) => {
   const displayPath = p.replace(`${process.cwd()}`, ".");
 
   const result = {
@@ -27,15 +30,15 @@ const aggregateStats = paths.map((p) => {
 
   if (argv.csv) {
     csvStream.write(result);
-  } else if (!argv.quiet) {
-    console.log(displayPath);
+  } else {
+    console.log(
+      "  " + JSON.stringify(result) + (index < array.length - 1 ? "," : "")
+    );
   }
-
-  return result;
 });
 
 if (argv.csv) {
   csvStream.end();
-} else {
-  console.log(JSON.stringify(aggregateStats, null, 2));
+} else if (argv.json) {
+  console.log("]");
 }
