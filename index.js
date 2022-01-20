@@ -27,7 +27,7 @@ const aggregateStats = paths.map((p) => {
 
   if (argv.csv) {
     csvStream.write(result);
-  } else if (argv.progress) {
+  } else if (!argv.quiet) {
     console.log(displayPath);
   }
 
@@ -39,12 +39,3 @@ if (argv.csv) {
 } else {
   console.log(JSON.stringify(aggregateStats, null, 2));
 }
-
-// // CoffeeScript
-// const coffeescripts = glob.sync("**/*.coffee", {
-//   cwd: process.cwd(),
-// });
-// stats['.coffee files'] = coffeescripts.length
-// console.log(stats);
-
-// // const pattern = "**.js,**.ts,**.tsx";
