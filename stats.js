@@ -7,13 +7,7 @@ const extensions = ["coffee", "hbs", "handlebars"];
 
 const identifiers = ["$"];
 
-const imports = [
-  "jquery",
-  "underscore",
-  "coffee",
-  "handlebars",
-  "hbs",
-];
+const imports = ["jquery", "underscore", "coffee", "handlebars", "hbs"];
 
 const isDirectory = (path_) => fs.lstatSync(path_).isDirectory();
 
@@ -50,24 +44,26 @@ exports.getStats = function (path_) {
 
   for (let file of scripts) {
     const source = fs.readFileSync(path.join(file), { encoding: "utf8" });
-    const ast = tsquery.ast(source);
+    try {
+      const ast = tsquery.ast(source);
 
-    for (const import_ of imports) {
-      const nodes = tsquery(
-        ast,
-        `ImportDeclaration > StringLiteral[text=/${import_}/]`
-      );
-      if (nodes.length > 0) {
-        stats[`${import_} imports`] += nodes.length;
+      for (const import_ of imports) {
+        const nodes = tsquery(
+          ast,
+          `ImportDeclaration > StringLiteral[text=/${import_}/]`
+        );
+        if (nodes.length > 0) {
+          stats[`${import_} imports`] += nodes.length;
+        }
       }
-    }
 
-    for (const identifier of identifiers) {
-      const nodes = tsquery(ast, `Identifier[name="${identifier}"]`);
-      if (nodes.length > 0) {
-        stats[`${identifier} identifiers`] += nodes.length;
+      for (const identifier of identifiers) {
+        const nodes = tsquery(ast, `Identifier[name="${identifier}"]`);
+        if (nodes.length > 0) {
+          stats[`${identifier} identifiers`] += nodes.length;
+        }
       }
-    }
+    } catch (err) {}
   }
 
   return stats;
