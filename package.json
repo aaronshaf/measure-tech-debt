@@ -1,6 +1,6 @@
 {
   "name": "measure-tech-debt",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "cli for measuring tech debt",
   "main": "index.js",
   "bin": "index.js",
