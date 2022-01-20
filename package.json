@@ -1,0 +1,31 @@
+{
+  "name": "measure-tech-debt",
+  "version": "1.0.0",
+  "description": "cli for measuring tech debt",
+  "main": "index.js",
+  "bin": "index.js",
+  "dependencies": {
+    "@phenomnomnominal/tsquery": "^4.2.0",
+    "chalk": "^5.0.0",
+    "fast-csv": "^4.3.6",
+    "glob": "^7.2.0",
+    "yargs": "^17.3.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aaronshaf/measure-tech-debt.git"
+  },
+  "keywords": [
+    "Tech",
+    "debt"
+  ],
+  "author": "Aaron Shafovaloff <aaronshaf@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aaronshaf/measure-tech-debt/issues"
+  },
+  "homepage": "https://github.com/aaronshaf/measure-tech-debt#readme"
+}
