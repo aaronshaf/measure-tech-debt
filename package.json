@@ -20,8 +20,7 @@
     "url": "git+https://github.com/aaronshaf/measure-tech-debt.git"
   },
   "keywords": [
-    "Tech",
-    "debt"
+    "Tech debt"
   ],
   "author": "Aaron Shafovaloff <aaronshaf@gmail.com>",
   "license": "MIT",
