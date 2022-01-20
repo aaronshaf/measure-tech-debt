@@ -10,7 +10,6 @@ const identifiers = ["$"];
 const imports = [
   "jquery",
   "underscore",
-  "spin.js",
   "coffee",
   "handlebars",
   "hbs",
