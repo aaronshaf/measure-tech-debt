@@ -15,14 +15,10 @@ exports.getStats = function (path_) {
   const stats = {};
 
   for (const import_ of imports) {
-    if (!stats[`${import_} imports`]) {
-      stats[`${import_} imports`] = 0;
-    }
+    stats[`${import_} imports`] = 0;
   }
   for (const identifier of identifiers) {
-    if (!stats[`${identifier} identifiers`]) {
-      stats[`${identifier} identifiers`] = 0;
-    }
+    stats[`${identifier} identifiers`] = 0;
   }
 
   const globOptions = {};
