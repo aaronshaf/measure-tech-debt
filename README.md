@@ -1,7 +1,7 @@
 # measure-tech-debt
 
 ```bash
-npm install -g measure-tech-debt
+npm install -y -g measure-tech-debt
 
 npx measure-tech-debt .
 npx measure-tech-debt *
