@@ -39,6 +39,6 @@ paths.forEach((p, index, array) => {
 
 if (argv.csv) {
   csvStream.end();
-} else if (argv.json) {
+} else {
   console.log("]");
 }
