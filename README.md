@@ -1,8 +1,8 @@
 # measure-tech-debt
 
-cli for measuring tech debt
-
 ```bash
+npm install -g measure-tech-debt
+
 npx measure-tech-debt .
 npx measure-tech-debt *
 npx measure-tech-debt * --json
