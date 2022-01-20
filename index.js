@@ -21,6 +21,7 @@ if (argv.csv) {
 }
 
 paths.forEach((p, index, array) => {
+  // if (!p.includes('jst')) return
   const displayPath = p.replace(`${process.cwd()}`, ".");
 
   const result = {
