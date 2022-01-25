@@ -18,7 +18,7 @@ npx measure-tech-debt .
 npx measure-tech-debt *
 ```
 
-## Output to JSON
+## Output to JSON (default)
 
 ```bash
 npx measure-tech-debt * --json
