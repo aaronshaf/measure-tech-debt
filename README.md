@@ -26,6 +26,16 @@ npx measure-tech-debt * --json > techdebt.json
 ```
 
 ```json
+[{"path":".","jquery imports":41,"underscore imports":10,"coffee imports":2,"handlebars imports":3,"hbs imports":0,"$ identifiers":110,".coffee extension":1,".hbs extension":0,".handlebars extension":2}]
+```
+
+## Output ot Pretty JSON
+
+```bash
+npx measure-tech-debt . --json | python -m json.tool
+```
+
+```json
 [
   {
     "path": ".",
