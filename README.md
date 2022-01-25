@@ -48,3 +48,8 @@ npx measure-tech-debt * --json > techdebt.json
 npx measure-tech-debt * --csv
 npx measure-tech-debt * --csv > techdebt.csv
 ```
+
+```csv
+path,jquery imports,underscore imports,coffee imports,handlebars imports,hbs imports,$ identifiers,.coffee extension,.hbs extension,.handlebars extension
+.,41,10,2,3,0,110,1,0,2%
+```
