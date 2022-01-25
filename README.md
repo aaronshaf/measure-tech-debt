@@ -3,7 +3,7 @@
 ## Install
 
 ```bash
-npm install -y -g measure-tech-debt
+npm install -y -g [measure-tech-debt](https://www.npmjs.com/package/measure-tech-debt)
 ```
 
 ## Single folder
