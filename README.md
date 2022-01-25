@@ -1,9 +1,12 @@
 `measure-tech-debt` measures a folder's tech debt according to imports (e.g. handlebars, coffeescript), identifiers (e.g. $), and file extensions (e.g. .hbs, coffee)
 
+[![See it on NPM!](https://img.shields.io/npm/v/@alaskaairux/icons.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/measure-tech-debt)
+[![License](https://img.shields.io/npm/l/measure-tech-debt.svg?color=blue&style=for-the-badge)](https://tldrlegal.com/license/mit-license)
+
 ## Install
 
 ```bash
-npm install -y -g [measure-tech-debt](https://www.npmjs.com/package/measure-tech-debt)
+npm install -y -g measure-tech-debt
 ```
 
 ## Single folder
