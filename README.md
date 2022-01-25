@@ -1,3 +1,5 @@
+This tool measures a folder's tech debt according to imports (e.g. handlebars, coffeescript), identifiers (e.g. $), and file extensions (e.g. .hbs, coffee)
+
 # measure-tech-debt
 
 ```bash
