@@ -1,4 +1,4 @@
-`measure-tech-debt` measures a folder's tech debt according to imports (e.g. handlebars, coffeescript), identifiers (e.g. $), and file extensions (e.g. .hbs, coffee)
+`measure-tech-debt` measures a folder's tech debt according to imports (e.g. handlebars, coffeescript), identifiers (e.g. $), and file extensions (e.g. .hbs, coffee). It's secret sauce is [tsquery](phenomnomnominal/tsquery).
 
 [![See it on NPM!](https://img.shields.io/npm/v/measure-tech-debt.svg?style=for-the-badge&color=orange)](https://www.npmjs.com/package/measure-tech-debt)
 [![License](https://img.shields.io/npm/l/measure-tech-debt.svg?color=blue&style=for-the-badge)](https://tldrlegal.com/license/mit-license)
