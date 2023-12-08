@@ -48,7 +48,7 @@ exports.getStats = function (path_) {
   const stats = {};
 
   const owner = getOwner(path_);
-  stats["owner"] = owner || "Unknown";
+  stats["owner"] = owner || "";
 
   let totalLines = 0;
   const globOptions = { cwd: path_ };
