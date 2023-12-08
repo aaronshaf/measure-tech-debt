@@ -50,9 +50,6 @@ exports.getStats = function (path_) {
   const owner = getOwner(path_);
   stats["owner"] = owner || "Unknown";
 
-  const tsPercentage = calculateTsPercentage(path_);
-  stats["TypeScript"] = `${tsPercentage}%`;
-
   let totalLines = 0;
   const globOptions = { cwd: path_ };
   const scripts = isDirectory(path_)
@@ -67,6 +64,9 @@ exports.getStats = function (path_) {
     }
   }
   stats["Lines of Code"] = totalLines;
+
+  const tsPercentage = calculateTsPercentage(path_);
+  stats["TypeScript"] = `${tsPercentage}%`;
 
   for (const import_ of imports) {
     stats[`${import_} imports`] = 0;
