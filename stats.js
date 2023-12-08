@@ -4,7 +4,7 @@ const glob = require("glob");
 const path = require("path");
 
 const identifiers = ["$"];
-const imports = ["jquery", "underscore", "handlebars"];
+const imports = ["react", "jquery", "handlebars"];
 const isDirectory = (path_) => fs.lstatSync(path_).isDirectory();
 
 const getOwner = (dir) => {
